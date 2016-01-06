@@ -1,7 +1,9 @@
 package action;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 /**
  * Created by hypo on 16-1-6.
  */
-public class EmployeeAction {
+public class EmployeeAction extends ActionSupport {
 }

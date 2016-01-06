@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;
 
 /**
+ * 单例模式获得hibernate Session
  * Created by hypo on 15-12-14.
  */
 public class HibernateSessionFactory {

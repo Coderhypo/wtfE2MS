@@ -16,6 +16,13 @@ public interface IDAO<T> {
     T get(Integer id);
 
     /**
+     * 查询数据
+     * @param HQL 输入要查询的HQL语句
+     * @return    返回符合条件的对象
+     */
+    T get(String HQL);
+
+    /**
      * 数据持久化到数据库
      * @param one 要持久化的对象
      * @return    返回是否持久化成功

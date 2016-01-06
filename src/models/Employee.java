@@ -13,12 +13,14 @@ public class Employee {
     private String name;
     private String sex;
     private Date workday;
+    private Integer dpId;
 
-    public Employee(String code, String name, String sex) {
+    public Employee(String code, String name, String sex, Integer dpId) {
         this.code = code;
         this.name = name;
         this.sex = sex;
         this.workday = new Date();
+        this.dpId = dpId;
     }
 
     public Integer getId() {
@@ -55,5 +57,17 @@ public class Employee {
 
     public Date getWorkday() {
         return workday;
+    }
+
+    public void setWorkday(Date workday) {
+        this.workday = workday;
+    }
+
+    public Integer getDpId() {
+        return dpId;
+    }
+
+    public void setDpId(Integer dpId) {
+        this.dpId = dpId;
     }
 }

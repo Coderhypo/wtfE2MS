@@ -17,7 +17,7 @@ public class ManagerDAO implements IDAO<Manager> {
     public Manager get(Integer id) {
 
         Session session = HibernateSessionFactory.currentSession();
-        String HQL = "FROM Manager m WHERE m.userId=" + id;
+        String HQL = "FROM Manager m WHERE m.id=" + id;
         Query query = session.createQuery(HQL);
 
         Manager rnt;

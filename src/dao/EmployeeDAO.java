@@ -17,7 +17,7 @@ public class EmployeeDAO implements IDAO<Employee> {
     public Employee get(Integer id) {
 
         Session session = HibernateSessionFactory.currentSession();
-        String HQL = "FROM Employee m WHERE m.userId=" + id;
+        String HQL = "FROM Employee e WHERE e.id=" + id;
         Query query = session.createQuery(HQL);
 
         Employee rnt;

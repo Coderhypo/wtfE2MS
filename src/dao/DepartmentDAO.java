@@ -17,7 +17,7 @@ public class DepartmentDAO implements IDAO<Department> {
     public Department get(Integer id) {
 
         Session session = HibernateSessionFactory.currentSession();
-        String HQL = "FROM Department m WHERE m.userId=" + id;
+        String HQL = "FROM Department d WHERE d.id=" + id;
         Query query = session.createQuery(HQL);
 
         Department rnt;

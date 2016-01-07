@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="net.ihypo.models.Book" table="books">
+        <cache usage="read-write"/>
+        <id name="bookId" column="book_id">
+            <generator class="native"/>
+        </id>
+        <property name="bookName" type="java.lang.String" column="book_name"/>
+        <property name="bookAuther" type="java.lang.String" column="book_auther"/>
+        <property name="bookPub" type="java.lang.String" column="book_pub"/>
+        <property name="ISBN" type="java.lang.String" column="book_isbn"/>
+        <property name="price" type="java.lang.Double" column="book_price"/>
+        <property name="typeId" type="java.lang.Integer" column="book_type_id"/>
+        <property name="canLend" type="java.lang.Boolean" column="book_canlend"/>
+        <property name="isLend" type="java.lang.Boolean" column="book_islend"/>
+    </class>
+</hibernate-mapping>

@@ -11,6 +11,9 @@ public class Manager {
     private String name;
     private String pass;
 
+    public Manager() {
+    }
+
     public Manager(String login, String name, String pass) {
         this.login = login;
         this.name = name;

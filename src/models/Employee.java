@@ -15,6 +15,9 @@ public class Employee {
     private Date workday;
     private Integer dpId;
 
+    public Employee() {
+    }
+
     public Employee(String code, String name, String sex, Integer dpId) {
         this.code = code;
         this.name = name;

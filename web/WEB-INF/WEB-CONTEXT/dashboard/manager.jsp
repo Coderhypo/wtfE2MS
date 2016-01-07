@@ -9,12 +9,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<%@include file="dashboard/static/head.jsp"%>
+	<%@include file="static/head.jsp"%>
 	<title>仪表盘</title>
 </head>
 <body>
-<%@include file="dashboard/static/nav.jsp"%>
-<%@include file="dashboard/static/sideber.jsp"%>
+<%@include file="static/nav.jsp"%>
+<%@include file="static/sideber.jsp"%>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 
 </div>	<!--/.main-->

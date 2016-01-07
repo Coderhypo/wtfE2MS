@@ -8,10 +8,7 @@ import org.apache.struts2.ServletActionContext;
 import servers.DepartmentFactory;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 部门相关控制器
@@ -29,17 +26,8 @@ public class DepartmentAction extends ActionSupport {
         IDAO dao = new DepartmentDAO();
         String HQL = "FROM Department d";
         List<Department> departments = dao.query(HQL);
-        List<Map> rnt = new ArrayList<>();
-        for(Department department : departments){
 
-            Map<String, String> tmp = new HashMap<>();
-            tmp.put("id", department.getId().toString());
-            tmp.put("code", department.getCode());
-            tmp.put("name", department.getName());
-
-            rnt.add(tmp);
-        }
-        request.setAttribute("dps", rnt);
+        request.setAttribute("dps", departments);
         return SUCCESS;
     }
 

@@ -17,7 +17,7 @@ public class LoginActhon extends ActionSupport{
     public String execute(){
 
         IDAO<Manager> dao = new ManagerDAO();
-        String HQL = "FROM Manager m WHERE m.login=" + login;
+        String HQL = "FROM Manager m WHERE m.login='" + login + "'";
         Manager manager = dao.get(HQL);
 
         if(manager == null){

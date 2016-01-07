@@ -28,19 +28,10 @@ public class ManagerAction extends ActionSupport {
         HttpServletRequest request = ServletActionContext.getRequest();
 
         IDAO dao = new ManagerDAO();
-        String HQL = "FROM Manager m";
+        String HQL = "FROM Manager m WHERE m.id=1";
         List<Manager> managers = dao.query(HQL);
-        List<Map> rnt = new ArrayList<>();
-        for(Manager employee : managers){
 
-            Map<String, String> tmp = new HashMap<>();
-            tmp.put("id", employee.getId().toString());
-            tmp.put("login", employee.getLogin());
-            tmp.put("name", employee.getName());
-
-            rnt.add(tmp);
-        }
-        request.setAttribute("mas", rnt);
+        request.setAttribute("man", managers.get(0));
         return SUCCESS;
     }
 
@@ -94,7 +85,7 @@ public class ManagerAction extends ActionSupport {
 
         IDAO dao = new ManagerDAO();
 
-        Manager manager = (Manager) dao.get(id);
+        Manager manager = (Manager) dao.get(1);
 
         if(manager == null){
             return ERROR;

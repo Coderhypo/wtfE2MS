@@ -44,7 +44,14 @@ public class EmployeeAction extends ActionSupport {
             Integer dpId = employee.getDpId();
             Department department = (Department) dao.get(dpId);
 
-            tmp.put("dp", department.getName());
+            if(department == null){
+
+                tmp.put("dp", "无部门");
+            }else {
+
+                tmp.put("dp", department.getName());
+            }
+
 
             rnt.add(tmp);
         }

@@ -7,18 +7,45 @@
 <struts>
         <constant name="struts.action.excludePattern" value="/static.*"></constant>
         <package name="department" extends="struts-default" namespace="/department">
-                <action name="*">
-                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                <action name="add" class="action.DepartmentAction" method="add">
+                        <result type="redirect">/department/all</result>
+                </action>
+                <action name="update" class="action.DepartmentAction" method="update">
+                        <result type="redirect">/department/all</result>
+                </action>
+                <action name="delete" class="action.DepartmentAction" method="delete">
+                        <result type="redirect">/department/all</result>
+                </action>
+                <action name="edit" class="action.DepartmentAction" method="get">
+                        <result>/WEB-INF/WEB-CONTEXT/dashboard/editdp.jsp</result>
+                </action>
+                <action name="*" class="action.DepartmentAction">
+                        <result>/WEB-INF/WEB-CONTEXT/dashboard/department.jsp</result>
                 </action>
         </package>
         <package name="employee" extends="struts-default" namespace="/employee">
-                <action name="*">
-                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                <action name="add" class="action.EmployeeAction" method="add">
+                        <result type="redirect">/employee/all</result>
+                </action>
+                <action name="update" class="action.EmployeeAction" method="update">
+                        <result type="redirect">/employee/all</result>
+                </action>
+                <action name="delete" class="action.EmployeeAction" method="delete">
+                        <result type="redirect">/employee/all</result>
+                </action>
+                <action name="edit" class="action.EmployeeAction" method="get">
+                        <result>/WEB-INF/WEB-CONTEXT/dashboard/editemp.jsp</result>
+                </action>
+                <action name="*" class="action.EmployeeAction">
+                        <result>/WEB-INF/WEB-CONTEXT/dashboard/employee.jsp</result>
                 </action>
         </package>
-        <package name="manager" extends="struts-default" namespace="/manager">
-                <action name="*">
-                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+        <package name="manager" extends="struts-default" namespace="/editmanager">
+                <action name="update" class="action.ManagerAction" method="update">
+                        <result type="redirect">/editmanager/all</result>
+                </action>
+                <action name="all" class="action.ManagerAction" method="get">
+                        <result>/WEB-INF/WEB-CONTEXT/dashboard/editman.jsp</result>
                 </action>
         </package>
         <package name="root" extends="struts-default" namespace="/">

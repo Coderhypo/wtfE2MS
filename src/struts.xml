@@ -5,4 +5,29 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+        <constant name="struts.action.excludePattern" value="/static.*"></constant>
+        <package name="department" extends="struts-default" namespace="/department">
+                <action name="*">
+                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                </action>
+        </package>
+        <package name="employee" extends="struts-default" namespace="/employee">
+                <action name="*">
+                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                </action>
+        </package>
+        <package name="manager" extends="struts-default" namespace="/manager">
+                <action name="*">
+                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                </action>
+        </package>
+        <package name="root" extends="struts-default" namespace="/">
+                <action name="login" class="action.LoginActhon">
+                        <result>/WEB-INF/WEB-CONTEXT/index.jsp</result>
+                        <result name="login">/WEB-INF/WEB-CONTEXT/login.jsp</result>
+                </action>
+                <action name="*">
+                        <result>/WEB-INF/WEB-CONTEXT/login.jsp</result>
+                </action>
+        </package>
 </struts>

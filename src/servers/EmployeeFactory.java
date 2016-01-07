@@ -1,5 +1,7 @@
 package servers;
 
+import dao.EmployeeDAO;
+import dao.IDAO;
 import models.Employee;
 
 /**
@@ -24,19 +26,43 @@ public class EmployeeFactory {
 
         Employee employee = new Employee(code,name,sex, dpId);
 
+        IDAO dao = new EmployeeDAO();
+        dao.add(employee);
+
         return employee;
     }
 
     private void setCode(String code) {
-        this.code = code.substring(0,10);
+
+        if(code.length() > 10){
+
+            this.code = code.substring(0,10);
+        }else {
+
+            this.code = code;
+        }
     }
 
     private void setName(String name) {
-        this.name = name.substring(0,20);
+
+        if(name.length() > 20){
+
+            this.name = name.substring(0,20);
+        }else {
+
+            this.name = name;
+        }
     }
 
     private void setSex(String sex) {
-        this.sex = sex.substring(0,10);
+
+        if(sex.length() > 10){
+
+            this.sex = sex.substring(0,10);
+        }else {
+
+            this.sex = sex;
+        }
     }
 
     private void setDpId(Integer dpId) {

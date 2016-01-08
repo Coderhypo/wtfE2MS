@@ -12,7 +12,7 @@ public class testMamager {
 
     public static void main(String[] agrs){
 
-        get();
+        add();
 
         return;
     }

@@ -26,7 +26,8 @@
   <div style="padding-top: 20px;">
     <h3>员工管理</h3>
     <hr/>
-    <div class="col-lg-7">
+    <div class="col-md-8 col-md-offset-2">
+      <h4>员工列表</h4>
       <table class="table table-bordered table-hover">
         <thead>
         <tr>
@@ -66,7 +67,9 @@
         </tbody>
       </table>
     </div>
-    <div class="col-lg-5">
+    <hr/>
+    <div class="col-md-8 col-md-offset-2">
+      <h4>添加员工</h4>
       <form class="form-horizontal" action="/employee/add" method="POST">
         <div class="form-group">
           <label class="col-sm-2 control-label">员工代码</label>

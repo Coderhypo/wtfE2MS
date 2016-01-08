@@ -24,7 +24,7 @@
   <div style="padding-top: 20px;">
     <h3>部门管理</h3>
     <hr/>
-    <div class="col-lg-7">
+    <div class="col-md-6">
       <table class="table table-bordered table-hover">
         <thead>
         <tr>
@@ -58,7 +58,7 @@
         </tbody>
       </table>
     </div>
-    <div class="col-lg-5">
+    <div class="col-md-6">
       <form class="form-horizontal" action="/department/add" method="POST">
         <div class="form-group">
           <label class="col-sm-2 control-label">部门代码</label>
